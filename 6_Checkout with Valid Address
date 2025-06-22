@@ -1,0 +1,13 @@
+@Test(priority = 4)
+public void testCheckout() {
+    driver.findElement(By.id("cartIcon")).click();
+    driver.findElement(By.id("checkoutButton")).click();
+
+    driver.findElement(By.id("address")).sendKeys("123 Test Lane");
+    driver.findElement(By.id("city")).sendKeys("Gurgaon");
+    driver.findElement(By.id("pin")).sendKeys("122001");
+    driver.findElement(By.id("placeOrder")).click();
+
+    String confirmation = driver.findElement(By.id("orderConfirmation")).getText();
+    Assert.assertTrue(confirmation.contains("Thank you"), "Order not placed successfully");
+}
