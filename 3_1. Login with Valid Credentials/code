@@ -1,0 +1,11 @@
+@Test(priority = 1)
+public void testValidLogin() {
+    driver.get("https://your-ecommerce-site.com/login");
+
+    driver.findElement(By.id("email")).sendKeys("testuser@example.com");
+    driver.findElement(By.id("password")).sendKeys("Test@123");
+    driver.findElement(By.id("loginButton")).click();
+
+    String actualTitle = driver.getTitle();
+    Assert.assertEquals(actualTitle, "User Dashboard", "Login failed with valid credentials");
+}
