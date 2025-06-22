@@ -1,0 +1,8 @@
+@Test(priority = 3)
+public void testAddToCart() {
+    driver.findElement(By.linkText("iPhone 13")).click();
+    driver.findElement(By.id("addToCart")).click();
+
+    WebElement cartCount = driver.findElement(By.id("cart-count"));
+    Assert.assertEquals(cartCount.getText(), "1", "Product not added to cart");
+}
