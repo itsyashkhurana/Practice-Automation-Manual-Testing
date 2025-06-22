@@ -1,4 +1,6 @@
- Functional Test Cases
+link http://3.111.89.121:8081/leads/undefined
+
+Functional Test Cases    
 | TC ID | Test Case Description                  | Test Steps                                         | Expected Result                                                    | Priority |
 | ----- | -------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------ | -------- |
 | TC01  | Add lead with valid data               | Fill all fields with valid inputs and click Submit | Lead is added successfully and success message appears             | High     |
