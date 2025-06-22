@@ -1,1 +1,36 @@
-.
+A. Functional Test Cases (Focus on what the system does)
+
+| TC ID   | Module            | Test Case Title              | Test Steps                                              | Expected Result                                        | Status |
+| ------- | ----------------- | ---------------------------- | ------------------------------------------------------- | ------------------------------------------------------ | ------ |
+| TC\_001 | User Registration | Register with valid inputs   | Fill all fields correctly → Click “Sign Up”             | Account created and user redirected to login page      | Pass   |
+| TC\_002 | User Registration | Register with existing email | Use email already registered                            | Show error: “Email already in use”                     | Pass   |
+| TC\_003 | Login             | Login with valid credentials | Enter correct username and password → Click Login       | Redirected to user dashboard                           | Pass   |
+| TC\_004 | Login             | Login with invalid password  | Enter wrong password                                    | Show error: “Invalid credentials”                      | Pass   |
+| TC\_005 | Product Search    | Search for a product         | Enter product name in search bar → Click search         | Show matching product list                             | Pass   |
+| TC\_006 | Product Filter    | Apply category filter        | Select category "Mobile"                                | Show only mobiles                                      | Pass   |
+| TC\_007 | Product Details   | View product details         | Click on a product from listing                         | Product page opens with price, images, and description | Pass   |
+| TC\_008 | Cart              | Add product to cart          | Click “Add to Cart” on product page                     | Product added to cart; cart count increases            | Pass   |
+| TC\_009 | Cart              | Remove product from cart     | Click remove icon in cart                               | Product removed from cart                              | Pass   |
+| TC\_010 | Checkout          | Checkout with valid address  | Add address → Select payment method → Click Place Order | Order placed successfully, confirmation shown          | Pass   |
+| TC\_011 | Payment           | Invalid card details         | Enter expired or incorrect card info → Try to pay       | Payment fails, error message shown                     | Pass   |
+| TC\_012 | Order History     | View past orders             | Go to profile → Click Order History                     | List of previous orders shown                          | Pass   |
+| TC\_013 | Logout            | Logout from application      | Click Logout button from menu                           | Redirected to login page                               | Pass   |
+| TC\_014 | Wishlist          | Add product to wishlist      | Click heart icon on a product                           | Product added to wishlist                              | Pass   |
+| TC\_015 | Review & Rating   | Submit product review        | Go to product page → Enter review → Submit              | Review added and shown under product                   | Pass   |
+
+ B. Non-Functional Test Cases (Focus on how well the system performs)
+
+| TC ID   | Type            | Test Case Title                         | Test Steps                                | Expected Result                                  | Status |
+| ------- | --------------- | --------------------------------------- | ----------------------------------------- | ------------------------------------------------ | ------ |
+| TC\_016 | Performance     | Homepage load time                      | Open homepage                             | Loads within 2–3 seconds                         | Pass   |
+| TC\_017 | Usability       | Proper labeling and buttons             | Inspect product and checkout pages        | Clear labels and accessible buttons              | Pass   |
+| TC\_018 | Compatibility   | Cross-browser compatibility (Chrome)    | Open site in Chrome                       | All UI and features work properly                | Pass   |
+| TC\_019 | Compatibility   | Cross-browser compatibility (Firefox)   | Open site in Firefox                      | No layout or functional issues                   | Pass   |
+| TC\_020 | Compatibility   | Mobile responsiveness                   | Open site on mobile (Chrome or Safari)    | Responsive design; menus and buttons are usable  | Pass   |
+| TC\_021 | Security        | SQL Injection in login                  | Enter `' OR 1=1 --` in login fields       | Input sanitized; login fails                     | Pass   |
+| TC\_022 | Security        | Session timeout after inactivity        | Stay idle for 15–20 minutes               | User logged out automatically                    | Pass   |
+| TC\_023 | Load Testing    | 100 users adding to cart simultaneously | Simulate with test tools (JMeter/Gatling) | No crash or data loss under load                 | Pass   |
+| TC\_024 | Accessibility   | Keyboard-only navigation                | Use Tab and Enter keys to browse site     | All major functionality accessible without mouse | Pass   |
+| TC\_025 | Localization    | Language switch                         | Switch to Hindi/French if available       | All text translated correctly                    | Pass   |
+| TC\_026 | Scalability     | Add 500+ products                       | Load 500+ items in listing page           | Pagination/infinite scroll handles it smoothly   | Pass   |
+| TC\_027 | Data Validation | Negative prices in DB                   | Insert product with -50 in DB (test)      | App does not show invalid-priced product         | Pass   |
