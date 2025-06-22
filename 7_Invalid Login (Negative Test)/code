@@ -1,0 +1,11 @@
+@Test(priority = 5)
+public void testInvalidLogin() {
+    driver.get("https://your-ecommerce-site.com/login");
+
+    driver.findElement(By.id("email")).sendKeys("wrong@example.com");
+    driver.findElement(By.id("password")).sendKeys("wrongPass");
+    driver.findElement(By.id("loginButton")).click();
+
+    WebElement errorMsg = driver.findElement(By.id("loginError"));
+    Assert.assertTrue(errorMsg.isDisplayed(), "Error message not shown for invalid login");
+}
