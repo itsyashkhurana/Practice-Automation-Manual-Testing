@@ -34,3 +34,15 @@ A. Functional Test Cases (Focus on what the system does)
 | TC\_025 | Localization    | Language switch                         | Switch to Hindi/French if available       | All text translated correctly                    | Pass   |
 | TC\_026 | Scalability     | Add 500+ products                       | Load 500+ items in listing page           | Pagination/infinite scroll handles it smoothly   | Pass   |
 | TC\_027 | Data Validation | Negative prices in DB                   | Insert product with -50 in DB (test)      | App does not show invalid-priced product         | Pass   |
+
+
+🐞 Bug Report – Web App Testing (E-commerce Website)
+| Bug ID | Summary                            | Steps to Reproduce                       | Severity | Status      |
+| ------ | ---------------------------------- | ---------------------------------------- | -------- | ----------- |
+| EC001  | Login fails with valid credentials | Enter valid email/password → Click Login | High     | Fixed       |
+| EC002  | Cart count not updated             | Add product to cart → Check cart icon    | Medium   | Open        |
+| EC003  | Checkout button unresponsive       | Go to cart → Click Checkout              | High     | Fixed       |
+| EC004  | Product images broken in listing   | Open product list page                   | Low      | Open        |
+| EC005  | Payment fails for valid card       | Enter valid card details → Submit        | Critical | In Progress |
+| EC006  | UI overlap in mobile view          | Open site in mobile browser              | Medium   | Fixed       |
+| EC007  | No error message on invalid coupon | Enter invalid coupon → Apply             | Low      | Open        |
