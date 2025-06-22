@@ -1,0 +1,33 @@
+ Functional Test Cases
+| TC ID | Test Case Description                  | Test Steps                                         | Expected Result                                                    | Priority |
+| ----- | -------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------ | -------- |
+| TC01  | Add lead with valid data               | Fill all fields with valid inputs and click Submit | Lead is added successfully and success message appears             | High     |
+| TC02  | Add lead with missing mandatory fields | Leave “Name” or “Email” blank and click Submit     | Validation error displayed for mandatory fields                    | High     |
+| TC03  | Check email format validation          | Enter invalid email (e.g. test\@com)               | Show “Invalid Email” error                                         | High     |
+| TC04  | Check phone number length              | Enter <10 or >10 digit phone number                | Show validation message for invalid phone number                   | Medium   |
+| TC05  | Status dropdown values                 | Click on “Status” dropdown                         | It should show predefined values (e.g., New, Contacted, Qualified) | Low      |
+| TC06  | Duplicate email check                  | Try to add a lead with already existing email      | Should show error: “Email already exists”                          | High     |
+
+
+UI & Usability Test Cases
+| TC ID | Test Case Description             | Test Steps                           | Expected Result                                         | Priority |
+| ----- | --------------------------------- | ------------------------------------ | ------------------------------------------------------- | -------- |
+| TC07  | Labels present for each field     | Check label next to each input field | All labels (Name, Email, Phone, etc.) should be visible | Medium   |
+| TC08  | Field placeholder text            | Check placeholders in text boxes     | Helpful placeholder text should guide the user          | Low      |
+| TC09  | Submit button disabled by default | Open form, don’t fill any field      | Submit button should be disabled                        | Medium   |
+| TC10  | Responsive UI on mobile/tablet    | Open in mobile browser               | Fields and buttons should be responsive                 | Low      |
+
+
+ Negative Test Cases
+| TC ID | Test Case Description                            | Test Steps                                                         | Expected Result                                         | Priority |
+| ----- | ------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------- | -------- |
+| TC11  | Submit with special characters in Name           | Enter `@!#Lead` in Name                                            | Should reject input or show warning                     | Medium   |
+| TC12  | SQL injection test                               | Enter `'; DROP TABLE users;--` in any field                        | Application should not crash; input should be sanitized | High     |
+| TC13  | Submit with whitespace only                      | Enter only spaces in fields                                        | Show validation message: “Field cannot be empty”        | High     |
+| TC14  | Add lead with past/future date if any date field | If there's a “Lead Date” field, enter past or future invalid dates | Show validation or restrict input                       | Medium   |
+
+Integration Test Cases
+| TC ID | Test Case Description                  | Test Steps                                          | Expected Result                        | Priority |
+| ----- | -------------------------------------- | --------------------------------------------------- | -------------------------------------- | -------- |
+| TC15  | Lead appears in lead list after adding | Add a new lead and go to lead list page             | Recently added lead should be visible  | High     |
+| TC16  | Email notification (if implemented)    | Add a lead and check if email is sent to admin/user | Email notification is sent as expected | Medium   |
