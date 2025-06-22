@@ -38,3 +38,15 @@
 | TC\_032 | Browser Compat | Open portal in Firefox                    | Access app in Firefox browser                                 | All features work as expected                    | Pass   |
 | TC\_033 | Browser Compat | Open portal in Edge                       | Access app in Microsoft Edge                                  | UI and functionality intact                      | Pass   |
 | TC\_034 | Mobile Testing | Open app in Android mobile browser        | Open portal on mobile Chrome                                  | Responsive and all features usable               | Pass   |
+
+
+🐞 Bug Report – Student Attendance Portal
+| Bug ID | Summary                                 | Steps to Reproduce                            | Severity | Status    |
+| ------ | --------------------------------------- | --------------------------------------------- | -------- | --------- |
+| SA001  | User not redirected after login         | Enter valid credentials → Click Login         | High     | Fixed     |
+| SA002  | Duplicate attendance allowed            | Mark attendance twice on same day             | High     | Fixed     |
+| SA003  | Report page crashes on large date range | Select large date range → Generate report     | Medium   | Open      |
+| SA004  | Date format incorrect in report         | Open report page → Check dates                | Low      | Open      |
+| SA005  | Email input accepts invalid format      | Type “abc” in email field during registration | Medium   | Fixed     |
+| SA006  | Logout button not visible on dashboard  | Login → Dashboard                             | Medium   | In Review |
+| SA007  | Attendance not saved intermittently     | Mark attendance → Refresh → Status not saved  | High     | Fixed     |
