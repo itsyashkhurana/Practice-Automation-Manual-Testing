@@ -1,0 +1,40 @@
+📋 Manual Test Cases – Student Attendance Portal
+| TC ID   | Module         | Test Case Title                       | Test Steps                                                                 | Expected Result                                    | Status |
+| ------- | -------------- | ------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------- | ------ |
+| TC\_001 | Login          | Login with valid credentials          | 1. Open login page <br>2. Enter valid username/password <br>3. Click Login | Redirects to dashboard with welcome message        | Pass   |
+| TC\_002 | Login          | Invalid login credentials             | 1. Enter wrong username/password <br>2. Click Login                        | Shows error: "Invalid credentials"                 | Pass   |
+| TC\_003 | Attendance     | Mark attendance                       | 1. Login <br>2. Go to attendance page <br>3. Click “Mark Present”          | Attendance marked as “Present”                     | Pass   |
+| TC\_004 | Attendance     | Prevent duplicate attendance          | 1. Mark attendance once <br>2. Try to mark again                           | Shows message: "Attendance already marked"         | Pass   |
+| TC\_005 | Admin Panel    | Update attendance record (Admin)      | 1. Login as admin <br>2. Go to student record <br>3. Edit status           | Status updated successfully                        | Pass   |
+| TC\_006 | Reports        | Generate attendance report (PDF)      | 1. Go to Reports <br>2. Select date range <br>3. Click Generate Report     | Report generated and downloaded as PDF             | Pass   |
+| TC\_007 | Security       | Session timeout                       | 1. Login <br>2. Stay inactive for 15 minutes                               | Auto logout with session timeout message           | Pass   |
+| TC\_008 | Attendance     | Mark attendance without login         | Try accessing attendance page without login                                | Redirects to login page                            | Pass   |
+| TC\_009 | Report Filters | Generate report with no data          | Select a date range with no attendance records                             | Shows message: “No data found for selected period” | Pass   |
+| TC\_010 | UI/UX          | Check responsiveness on mobile device | Open portal on a mobile browser                                            | UI elements adjust correctly to screen size        | Pass   |
+
+| TC ID   | Module         | Test Case Title                           | Test Steps                                                    | Expected Result                                  | Status |
+| ------- | -------------- | ----------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------ | ------ |
+| TC\_011 | Login          | Empty username and password               | Leave both fields blank → Click Login                         | Show “Username and Password required” error      | Pass   |
+| TC\_012 | Login          | Password masking                          | Check password field while typing                             | Characters are hidden (••••)                     | Pass   |
+| TC\_013 | Login          | Forgot password link                      | Click on “Forgot Password” link                               | Navigates to password recovery page              | Pass   |
+| TC\_014 | Attendance     | Mark attendance on holiday                | Try to mark attendance on Sunday/holiday                      | Show error: “Attendance not allowed on holidays” | Pass   |
+| TC\_015 | Attendance     | View today's attendance                   | Login → Open dashboard                                        | Today's attendance status shown                  | Pass   |
+| TC\_016 | Attendance     | Validate date format                      | Check date field in attendance module                         | Date format should be DD/MM/YYYY                 | Pass   |
+| TC\_017 | Admin Panel    | Add a new student                         | Login as admin → Go to student list → Click “Add New Student” | New student added successfully                   | Pass   |
+| TC\_018 | Admin Panel    | Delete student record                     | Select student → Click “Delete”                               | Confirmation popup → Record deleted              | Pass   |
+| TC\_019 | Admin Panel    | Update multiple attendance records        | Select multiple students → Bulk edit status                   | All records updated with confirmation            | Pass   |
+| TC\_020 | Admin Panel    | Invalid student ID                        | Search using non-existing student ID                          | Show “Student not found” message                 | Pass   |
+| TC\_021 | Reports        | Export report in Excel                    | Generate report → Click “Export to Excel”                     | Excel file downloaded                            | Pass   |
+| TC\_022 | Reports        | Filter report by class                    | Select class dropdown → Click filter                          | Report filtered by selected class                | Pass   |
+| TC\_023 | Reports        | Filter report by attendance range         | Select from “70% to 100%” → Click apply                       | Display students matching attendance range       | Pass   |
+| TC\_024 | Security       | SQL Injection in login                    | Enter `'OR 1=1 --` in username or password                    | Input sanitized; error shown                     | Pass   |
+| TC\_025 | Security       | Direct access to admin page without login | Try URL like `/admin` without logging in                      | Redirected to login page                         | Pass   |
+| TC\_026 | Security       | Password reset email                      | Enter email in forgot password form                           | Email with reset link sent                       | Pass   |
+| TC\_027 | UI/UX          | Check alignment of dashboard elements     | Login and inspect UI layout                                   | All elements are properly aligned                | Pass   |
+| TC\_028 | UI/UX          | Check label spelling                      | Scan through all labels and buttons                           | No typos or grammar mistakes                     | Pass   |
+| TC\_029 | UI/UX          | Tab navigation using keyboard             | Press Tab key to navigate through form fields                 | Focus moves logically through each input field   | Pass   |
+| TC\_030 | Performance    | Login response time                       | Measure time between login and dashboard load                 | Page loads within 3 seconds                      | Pass   |
+| TC\_031 | Performance    | Report generation time                    | Generate report for 1000+ students                            | Report generates within 5 seconds                | Pass   |
+| TC\_032 | Browser Compat | Open portal in Firefox                    | Access app in Firefox browser                                 | All features work as expected                    | Pass   |
+| TC\_033 | Browser Compat | Open portal in Edge                       | Access app in Microsoft Edge                                  | UI and functionality intact                      | Pass   |
+| TC\_034 | Mobile Testing | Open app in Android mobile browser        | Open portal on mobile Chrome                                  | Responsive and all features usable               | Pass   |
