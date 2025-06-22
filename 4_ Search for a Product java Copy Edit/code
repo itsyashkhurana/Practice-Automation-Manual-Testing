@@ -1,0 +1,8 @@
+@Test(priority = 2)
+public void testProductSearch() {
+    driver.findElement(By.id("searchInput")).sendKeys("iPhone");
+    driver.findElement(By.id("searchButton")).click();
+
+    List<WebElement> results = driver.findElements(By.className("product-item"));
+    Assert.assertTrue(results.size() > 0, "No products found for search term");
+}
