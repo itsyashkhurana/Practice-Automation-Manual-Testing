@@ -31,3 +31,15 @@ Integration Test Cases
 | ----- | -------------------------------------- | --------------------------------------------------- | -------------------------------------- | -------- |
 | TC15  | Lead appears in lead list after adding | Add a new lead and go to lead list page             | Recently added lead should be visible  | High     |
 | TC16  | Email notification (if implemented)    | Add a lead and check if email is sent to admin/user | Email notification is sent as expected | Medium   |
+
+
+🐞 Bug Report – Lead Management CRM Web Application
+| Bug ID | Summary                           | Steps to Reproduce                   | Severity | Status      |
+| ------ | --------------------------------- | ------------------------------------ | -------- | ----------- |
+| CRM001 | Add lead button not working       | Click on “Add Lead” in dashboard     | Critical | Fixed       |
+| CRM002 | Dropdown values not loading       | Open Lead Status dropdown            | Medium   | Open        |
+| CRM003 | Validation missing on email field | Add new lead → Type invalid email    | High     | Fixed       |
+| CRM004 | “View Lead” shows undefined error | Click on a lead with incomplete data | Medium   | Fixed       |
+| CRM005 | UI misaligned in table headers    | Go to Lead List page                 | Low      | Open        |
+| CRM006 | Delete confirmation not shown     | Click Delete on any lead             | Medium   | Fixed       |
+| CRM007 | Page crashes on back navigation   | View lead → Click browser back       | High     | In Progress |
